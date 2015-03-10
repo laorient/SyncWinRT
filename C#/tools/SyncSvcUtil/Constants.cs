@@ -95,8 +95,8 @@ namespace Microsoft.Synchronization.ClientServices
         public const string ClientCachePathArgName = "cachePath";
         public const string ClientServiceUriArgName = "serviceUri";
         public const string ClientServiceCookieContainerArgName = "cookieContainer";
-        public const string ClientServiceCookieContainerArgAttrOptional = "Optional";
-        public const string ClientServiceCookieContainerArgAttrDefaultParam = "DefaultParameterValue";
+        public const string ClientServiceCookieContainerArgAttrOptional = "System.Runtime.InteropServices.Optional";
+        public const string ClientServiceCookieContainerArgAttrDefaultParam = "System.Runtime.InteropServices.DefaultParameterValue";
         public const string ClientSymmetricAlgorithmArgName = "symmAlgorithm";
         public const string SymmetricAlgorithmTypeName = "System.Security.Cryptography.SymmetricAlgorithm";
         public const string ClientEntityVariableName = "entity";

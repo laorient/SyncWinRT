@@ -158,8 +158,9 @@ namespace Microsoft.Synchronization.ClientServices.CodeDom
             ctor.Parameters.Add(new CodeParameterDeclarationExpression(typeof(Uri), Constants.ClientServiceUriArgName));
             // add the optional CookieContainer parameter
             var cpdeCookieContainer = new CodeParameterDeclarationExpression(typeof(CookieContainer), Constants.ClientServiceCookieContainerArgName);
-            cpdeCookieContainer.CustomAttributes.Add(new CodeAttributeDeclaration(Constants.ClientServiceCookieContainerArgAttrOptional));
-            cpdeCookieContainer.CustomAttributes.Add(new CodeAttributeDeclaration(Constants.ClientServiceCookieContainerArgAttrDefaultParam, new CodeAttributeArgument(new CodePrimitiveExpression(null))));
+            cpdeCookieContainer.CustomAttributes.AddRange(new CodeAttributeDeclaration[] {
+                new CodeAttributeDeclaration(Constants.ClientServiceCookieContainerArgAttrOptional),
+                new CodeAttributeDeclaration(Constants.ClientServiceCookieContainerArgAttrDefaultParam, new CodeAttributeArgument(new CodePrimitiveExpression(null)))});
             ctor.Parameters.Add(cpdeCookieContainer);
 
             ctor.BaseConstructorArgs.Add(
